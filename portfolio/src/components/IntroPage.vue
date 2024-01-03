@@ -78,16 +78,16 @@ export default {
   background-color: white; /* Dash appearance */
   margin: 10px 0; /* Adjust spacing */
   opacity: 0;
-  transition: opacity 1s ease, width 1s ease;
+  transition: opacity 1.5s ease, width 1.5s ease;
 }
 
 /* Animation classes */
 .animate-name-top {
-  animation: slideNameTop 1s ease forwards;
+  animation: slideNameTop 1.5s ease forwards;
 }
 
 .animate-title-bottom {
-  animation: slideTitleBottom 1s ease forwards;
+  animation: slideTitleBottom 1.5s ease forwards;
 }
 
 .animate-dash {
