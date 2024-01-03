@@ -21,9 +21,9 @@ export default {
   },
   mounted() {
     // Delay the animation for 500ms (adjust as needed)
-    setTimeout(() => {
-      this.animate = true;
-    }, 500);
+    this.$nextTick(() => {
+      this.animate = true; // Trigger animation after the next DOM update
+    });
   },
 };
 </script>
