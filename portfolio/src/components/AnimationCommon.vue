@@ -9,6 +9,16 @@
 </template>
   
 <script>
+let isPassiveSupported = false;
+try {
+    const options = Object.defineProperty({}, 'passive', {
+        get: () => isPassiveSupported = true
+    });
+    window.addEventListener('test', null, options);
+} catch (err) {
+    console.log("Passive not supported");
+}
+
 export default {
     props: {
         name: String,
@@ -17,38 +27,32 @@ export default {
         duration: { type: Number, default: 1 }
     },
 
-    data() {
-        return {
-            isVisible: false,
-            observer: null
-        };
-    },
+    data: () => ({
+        isVisible: false
+    }),
 
     methods: {
-        handleIntersection(entries) {
-            const isVisible = entries[0].isIntersecting;
-            if (isVisible !== this.isVisible) {
-                this.isVisible = isVisible;
-            }
+        inViewport() {
+            const rect = this.$el.getBoundingClientRect()
+            return rect.top <= (window.innerHeight - this.offsetTop) && rect.left <= window.innerWidth
+        },
+        detectVisibility() {
+            this.isVisible = this.inViewport()
         }
     },
 
     mounted() {
-        const options = {
-            root: null, // Use the viewport as the root
-            rootMargin: `${this.offsetTop}px 0px`, // Adjust the margin as needed
-            threshold: 0.1 // Adjust the threshold as needed (0.1 means 10% of the element is visible)
-        };
-
-        this.observer = new IntersectionObserver(this.handleIntersection, options);
-        this.observer.observe(this.$el);
+        this.$nextTick(this.detectVisibility)
+        window.addEventListener('scroll', this.detectVisibility, isPassiveSupported ? { passive: true } : false)
+        window.addEventListener('resize', this.detectVisibility, isPassiveSupported ? { passive: true } : false)
+        window.addEventListener('orientationchange', this.detectVisibility, isPassiveSupported ? { passive: true } : false)
     },
 
-    beforeUnmount() {
-        if (this.observer) {
-            this.observer.disconnect();
-        }
+    unmounted() {
+        window.removeEventListener('scroll', this.detectVisibility)
+        window.removeEventListener('resize', this.detectVisibility)
+        window.removeEventListener('orientationchange', this.detectVisibility)
     }
-};
+}
 </script>
   
