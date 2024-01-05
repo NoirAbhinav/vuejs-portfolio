@@ -29,15 +29,14 @@ export default {
 </script>
 
 <style scoped>
-/* Add some basic styling */
 .intro {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center; /* Center content vertically */
-  overflow: hidden; /* Hide any content overflow */
-  position: relative; /* Positioning for the background */
-  color: white; /* Font color */
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  color: white;
 }
 
 .intro-background {
@@ -46,14 +45,14 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('@/assets/background.svg'); /* Update the path accordingly */
-  background-size: cover; /* Adjust as needed */
-  z-index: -1; /* Place it behind the content */
+  background-image: url('@/assets/background.svg');
+  background-size: cover;
+  z-index: -1;
 }
 
 .intro-content {
   text-align: center;
-  width: 100%; /* Fill the entire width */
+  width: 100%;
 }
 
 .intro-name {
@@ -67,16 +66,16 @@ export default {
 .intro-name-text,
 .intro-title {
   opacity: 0;
-  transform: translateY(-100vh); /* Start off-screen */
+  transform: translateY(-100vh);
   transition: opacity 1s ease, transform 1s ease;
-  font-size: 2em; /* Font size */
+  font-size: 2em;
 }
 
 .dash {
   width: 1px;
-  height: 2px; /* Dash height */
-  background-color: white; /* Dash appearance */
-  margin: 10px 0; /* Adjust spacing */
+  height: 2px;
+  background-color: white;
+  margin: 10px 0;
   opacity: 0;
   transition: opacity 1.5s ease, width 1.5s ease;
 }
@@ -99,6 +98,7 @@ export default {
     opacity: 0;
     transform: translateY(-100vh);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -110,6 +110,7 @@ export default {
     opacity: 0;
     transform: translateY(100vh);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -121,9 +122,10 @@ export default {
     opacity: 0;
     width: 0;
   }
+
   to {
     opacity: 1;
-    width: 70%; /* Adjust width */
+    width: 70%;
   }
 }
 </style>

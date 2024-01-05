@@ -15,5 +15,5 @@ $breakpoints: (
 
 @font-face {
     font-family: "Montserrat-Regular";
-    src: url("~@fontsource/montserrat");
+    src: require("~@fontsource/montserrat");
 }
