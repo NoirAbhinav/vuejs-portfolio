@@ -3,6 +3,7 @@
     <IntroPage />
     <Description />
     <ExperiencePage />
+    <SkillSetPreview />
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import IntroPage from './components/IntroPage.vue';
 import Description from './components/Description.vue';
 import ExperiencePage from './components/ExperiencePage.vue';
+import SkillSetPreview from './components/SkillSetPreview.vue';
 
 export default {
   name: 'App',
@@ -17,6 +19,7 @@ export default {
     IntroPage,
     Description,
     ExperiencePage,
+    SkillSetPreview
   },
 };
 </script>

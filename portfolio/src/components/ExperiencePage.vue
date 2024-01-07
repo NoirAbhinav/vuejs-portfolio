@@ -1,13 +1,13 @@
 <template>
     <div class="experience">
-        <AnimationCommon name="fadeDown" :duration="1" class="experience-title">
+        <AnimationCommon name="fadeDown" :duration="0.5" class="experience-title">
             <DescriptionTitle :header="'Experience'" />
         </AnimationCommon>
         <div class="experience-education-container">
-            <AnimationCommon name="fadeLeft" :duration="1" class="experience-education">
+            <AnimationCommon name="fadeLeft" :duration="0.5" class="experience-education">
                 <ExperienceDetail :posts="education.posts" :title="education.title" />
             </AnimationCommon>
-            <AnimationCommon name="fadeRight" :duration="1" class="experience-professional">
+            <AnimationCommon name="fadeRight" :duration="0.5" class="experience-professional">
                 <ExperienceDetail :posts="professional.posts" :title="professional.title" />
             </AnimationCommon>
         </div>
@@ -53,9 +53,9 @@ export default {
                 title: 'Professional',
                 posts: [
                     {
-                        year: '2019 - 2023',
-                        title: 'B.Tech in Computer Science and Engineering',
-                        content: 'National Institute of Technology, Calicut',
+                        year: '2022 - Present',
+                        title: 'Affinsys AI',
+                        content: 'Bangalore, Karnataka',
                     },
                     {
                         year: 'May 2022 - Jun 2022',
