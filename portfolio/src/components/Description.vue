@@ -1,7 +1,7 @@
 <template>
     <div id="description">
         <AnimationCommon name="fadeDown" :duration="1" class="description-title">
-            <DescriptionTitle />
+            <DescriptionTitle :header="'About Me'" />
         </AnimationCommon>
         <AnimationCommon name="fadeLeft" :duration="1" class="image">
             <PersonalImage />
@@ -37,9 +37,14 @@ export default {
 </script>
 
 <style>
+.description-title {
+    color: black;
+}
+
 .description {
     position: relative;
     height: 50vh;
+    color: black;
 }
 
 .about-contact-details {

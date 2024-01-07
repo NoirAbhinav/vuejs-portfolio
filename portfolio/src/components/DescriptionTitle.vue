@@ -1,13 +1,12 @@
 <template>
     <div class="descript-title">
-        <h3>About Me</h3>
+        <h3>{{ header }}</h3>
     </div>
 </template>
   
 <script>
-
 export default {
-    components: {}
+    props: ["header"],
 };
 </script>
   
@@ -20,7 +19,6 @@ export default {
 .descript-title h3 {
     font-size: 3rem;
     text-transform: uppercase;
-    color: #000;
     font-weight: 100;
 
     &:after {
@@ -28,7 +26,7 @@ export default {
         width: 150px;
         display: block;
         margin: 20px auto;
-        border-bottom: 2px solid #000;
+        border-bottom: 2px solid;
         /* Adjust thickness and color as needed */
         padding-bottom: 4px;
         /* Adjust the space between text and underline */

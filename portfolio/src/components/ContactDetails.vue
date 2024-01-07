@@ -5,13 +5,17 @@
             <p><strong>Email:</strong> abhinavbbps2000@email.com</p>
             <p><strong>Phone:</strong> +917827598718</p>
             <p><strong>City:</strong> Delhi-NCR</p>
+            <SocialInfo />
+
         </div>
     </div>
 </template>
   
 <script>
+import SocialInfo from './SocialInfo.vue';
+
 export default {
-    // Your component logic
+    components: { SocialInfo }
 };
 </script>
   

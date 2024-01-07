@@ -1,20 +1,22 @@
 <template>
   <div id="app">
-    <!-- Add the Intro component -->
     <IntroPage />
     <Description />
+    <ExperiencePage />
   </div>
 </template>
 
 <script>
 import IntroPage from './components/IntroPage.vue';
 import Description from './components/Description.vue';
+import ExperiencePage from './components/ExperiencePage.vue';
 
 export default {
   name: 'App',
   components: {
     IntroPage,
     Description,
+    ExperiencePage,
   },
 };
 </script>
