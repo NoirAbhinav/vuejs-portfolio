@@ -1,12 +1,12 @@
 <template>
     <div id="description">
-        <AnimationCommon name="fadeDown" :duration="1" class="description-title">
+        <AnimationCommon name="fadeDown" :duration="0.5" class="description-title">
             <DescriptionTitle :header="'About Me'" />
         </AnimationCommon>
-        <AnimationCommon name="fadeLeft" :duration="1" class="image">
+        <AnimationCommon name="fadeLeft" :duration="0.5" class="image">
             <PersonalImage />
         </AnimationCommon>
-        <AnimationCommon name="fadeLeft" :duration="1">
+        <AnimationCommon name="fadeLeft" :duration="0.5">
             <div class="about-contact-details">
                 <AboutMe />
                 <ContactDetails />
