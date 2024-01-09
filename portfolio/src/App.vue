@@ -4,7 +4,6 @@
     <Description :data="data.Description" />
     <ExperiencePage :education="data.Experience.education" :professional="data.Experience.professional" />
     <SkillSetPreview :skills="data.Skills" />
-    <ProjectDetailPreview />
   </div>
 </template>
 
@@ -14,7 +13,6 @@ import IntroPage from './components/IntroPage.vue';
 import Description from './components/Description.vue';
 import ExperiencePage from './components/ExperiencePage.vue';
 import SkillSetPreview from './components/SkillSetPreview.vue';
-import ProjectDetailPreview from './components/ProjectDetailPreview.vue';
 
 export default {
   name: 'App',
@@ -28,7 +26,6 @@ export default {
     Description,
     ExperiencePage,
     SkillSetPreview,
-    ProjectDetailPreview,
   },
 };
 </script>
