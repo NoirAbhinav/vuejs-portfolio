@@ -27,44 +27,15 @@ export default {
         AnimationCommon,
         ExperienceDetail
     },
-    data() {
-        return {
-            education: {
-                title: 'Education',
-                posts: [
-                    {
-                        year: '2019 - 2023',
-                        title: 'B.Tech in CSE with specialization in CPS, CGPA - 8.62',
-                        content: 'Vellore Institute of Technology, Chennai',
-                    },
-                    {
-                        year: '2019',
-                        title: 'Bal Bharati Public School (CBSE) - 95%',
-                        content: 'Noida, Uttar Pradesh',
-                    },
-                    {
-                        year: '2017',
-                        title: 'Bal Bharati Public School (CBSE) - 9.2 GPA',
-                        content: 'Noida, Uttar Pradesh',
-                    }
-                ],
-            },
-            professional: {
-                title: 'Professional',
-                posts: [
-                    {
-                        year: '2022 - Present',
-                        title: 'Affinsys AI',
-                        content: 'Bangalore, Karnataka',
-                    },
-                    {
-                        year: 'May 2022 - Jun 2022',
-                        title: 'HAL, RWRDC(Bangalore) - Intern',
-                        content: 'Bangalore, Karnataka',
-                    }
-                ],
-            }
-        };
+    props: {
+        education: {
+            type: Object,
+            required: true
+        },
+        professional: {
+            type: Object,
+            required: true
+        }
     },
 
 };

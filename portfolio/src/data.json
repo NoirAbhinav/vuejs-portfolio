@@ -1,0 +1,98 @@
+{
+    "IntroPage": {
+        "name": "Abhinav Nair",
+        "title": "Software Engineer"
+    },
+    "Description": {
+        "header": "About Me",
+        "description": "I am a recent graduate in Computer Science specializing in Cyber-Physical Systems. Currently, I am leveraging my skills as a Backend Engineer/Data Scientist at Affinsys AI, where I contribute to crafting scalable campaign management and recommendation systems. My journey in technology began at 16, sparking an enduring passion that led me to pursue this dynamic career.<br><br>My approach to learning has always been hands-on, delving into various projects to grasp new concepts swiftly. I've dived into areas that initially held minimal appeal, such as backend development using frameworks like Django and FastAPI, web development employing Vue.js and React, and even ventured into DevOps with Docker, Grafana, and Prometheus. This portfolio stands as a testament to my commitment to mastering diverse skill sets. Embracing challenges is second nature to me; each hurdle presents an opportunity to learn, fostering continuous growth and innovation in my work.",
+        "image": "assets/me.png",
+        "contactInfo": {
+            "Email": "abhinavbbps2000@email.com",
+            "phone": "+917827598718",
+            "City": "Delhi-NCR"
+        }
+    },
+    "Experience": {
+        "education": {
+            "title": "Education",
+            "posts": [
+                {
+                    "year": "2019 - 2023",
+                    "title": "B.Tech in CSE with specialization in CPS, CGPA - 8.62",
+                    "location": "Vellore Institute of Technology, Chennai"
+                },
+                {
+                    "year": "2019",
+                    "title": "Bal Bharati Public School (CBSE) - 95%",
+                    "location": "Noida, Uttar Pradesh"
+                },
+                {
+                    "year": "2017",
+                    "title": "Bal Bharati Public School (CBSE) - 9.2 GPA",
+                    "location": "Noida, Uttar Pradesh"
+                }
+            ]
+        },
+        "professional": {
+            "title": "Professional Experience",
+            "posts": [
+                {
+                    "year": "2022 - Present",
+                    "title": "Affinsys AI",
+                    "location": "Bangalore, Karnataka"
+                },
+                {
+                    "year": "May 2022 - Jun 2022",
+                    "title": "HAL, RWRDC(Bangalore) - Intern",
+                    "location": "Bangalore, Karnataka"
+                }
+            ]
+        }
+    },
+    "Skills": {
+        "header": "My Skills",
+        "skillset": [
+            {
+                "name": "Django",
+                "icon": "assets/django.svg"
+            },
+            {
+                "name": "Docker",
+                "icon": "assets/docker.svg"
+            },
+            {
+                "name": "FastApi",
+                "icon": "assets/fastapi.svg"
+            },
+            {
+                "name": "Tensorflow",
+                "icon": "assets/Tensorflow.svg"
+            },
+            {
+                "name": "Python",
+                "icon": "assets/python.svg"
+            },
+            {
+                "name": "PostgreSQL",
+                "icon": "assets/postgresql.svg"
+            },
+            {
+                "name": "Redis",
+                "icon": "assets/redis.svg"
+            },
+            {
+                "name": "RabbitMQ",
+                "icon": "assets/rabbitmq.svg"
+            },
+            {
+                "name": "Pytorch",
+                "icon": "assets/pytorch.svg"
+            },
+            {
+                "name": "MongoDB",
+                "icon": "assets/mongodb.svg"
+            }
+        ]
+    }
+}

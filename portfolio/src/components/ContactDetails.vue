@@ -1,27 +1,29 @@
 <template>
     <div class="contact-me">
         <h2>Contact Me</h2>
-        <div class="contact-info">
-            <p><strong>Email:</strong> abhinavbbps2000@email.com</p>
-            <p><strong>Phone:</strong> +917827598718</p>
-            <p><strong>City:</strong> Delhi-NCR</p>
-            <SocialInfo />
-
+        <div v-for="(value, key) in contactInfo" :key="key">
+            <p><strong>{{ key }}:</strong> {{ value }}</p>
         </div>
+        <SocialInfo />
     </div>
 </template>
-  
+    
 <script>
 import SocialInfo from './SocialInfo.vue';
 
 export default {
-    components: { SocialInfo }
+    components: { SocialInfo },
+    props: {
+        contactInfo: {
+            type: Object,
+            required: true
+        }
+    },
 };
 </script>
   
 <style scoped>
 .contact-me {
-    padding-top: 20px;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     color: #333;

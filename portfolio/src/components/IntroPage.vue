@@ -3,9 +3,9 @@
     <div class="intro-background"></div>
     <div class="intro-content">
       <div class="intro-name">
-        <p class="intro-name-text" :class="{ 'animate-name-top': animate }">Abhinav Nair</p>
+        <p class="intro-name-text" :class="{ 'animate-name-top': animate }">{{ data.name }}</p>
         <div class="dash" :class="{ 'animate-dash': animate }"></div>
-        <p class="intro-title" :class="{ 'animate-title-bottom': animate }">Software Engineer</p>
+        <p class="intro-title" :class="{ 'animate-title-bottom': animate }">{{ data.title }}</p>
       </div>
     </div>
   </div>
@@ -16,8 +16,14 @@ export default {
   name: 'IntroPage',
   data() {
     return {
-      animate: false,
+      animate: false, // Define animate here
     };
+  },
+  props: {
+    data: {
+      type: Object,
+      required: true
+    }
   },
   mounted() {
     // Delay the animation for 500ms (adjust as needed)
