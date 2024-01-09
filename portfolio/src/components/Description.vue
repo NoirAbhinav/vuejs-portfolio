@@ -1,17 +1,16 @@
 <template>
     <div id="description">
         <AnimationCommon name="fadeDown" :duration="0.5" class="description-title">
-            <DescriptionTitle :header="'About Me'" />
+            <DescriptionTitle :header="data.header" />
         </AnimationCommon>
         <AnimationCommon name="fadeLeft" :duration="0.5" class="image">
-            <PersonalImage />
+            <PersonalImage :image="data.image" />
         </AnimationCommon>
         <AnimationCommon name="fadeLeft" :duration="0.5">
             <div class="about-contact-details">
-                <AboutMe />
-                <ContactDetails />
+                <AboutMe :description="data.description" />
+                <ContactDetails :contactInfo="data.contactInfo" />
             </div>
-
         </AnimationCommon>
     </div>
 </template>
@@ -26,6 +25,12 @@ import ContactDetails from './ContactDetails.vue';
 export default {
 
     name: 'App',
+    props: {
+        data: {
+            type: Object,
+            required: true
+        }
+    },
     components: {
         AboutMe,
         PersonalImage,

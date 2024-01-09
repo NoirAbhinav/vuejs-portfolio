@@ -1,7 +1,7 @@
 <template>
     <div class="skills">
-        <div v-for="(skill, index) in skills" :key="index" class="skill">
-            <img :src="skill.icon" :alt="skill.name" class="skill-icon" />
+        <div v-for="(skill, index) in skillset" :key="index" class="skill">
+            <img :src="getImageSource(skill.icon)" :alt="skill.name" class="skill-icon" />
             <span>{{ skill.name }}</span>
         </div>
     </div>
@@ -9,21 +9,17 @@
   
 <script>
 export default {
-    data() {
-        return {
-            skills: [
-                { name: 'Django', icon: require('@/assets/django.svg') },
-                { name: 'Docker', icon: require('@/assets/docker.svg') },
-                { name: 'FastApi', icon: require('@/assets/fastapi.svg') },
-                { name: 'Tensorflow', icon: require('@/assets/Tensorflow.svg') },
-                { name: 'Python', icon: require('@/assets/python.svg') },
-                { name: 'PostgreSQL', icon: require('@/assets/postgresql.svg') },
-                { name: 'Redis', icon: require('@/assets/redis.svg') },
-                { name: 'RabbitMQ', icon: require('@/assets/rabbitmq.svg') },
-                { name: "Pytorch", icon: require('@/assets/pytorch.svg') },
-                { name: "MongoDB", icon: require('@/assets/mongodb.svg') },
-            ]
-        };
+    props: {
+        skillset: {
+            type: Array,
+            required: true
+        }
+    },
+    methods: {
+        getImageSource(image) {
+            // Use  with a dynamic import to load the image
+            return require(`@/${image}`);
+        }
     }
 };
 </script>

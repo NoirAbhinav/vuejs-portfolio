@@ -1,12 +1,24 @@
 <template>
     <div class="image-container">
-        <img :src="require('@/assets/me.png')" alt="Fading SVG Image" class="centered-image" />
+        <img :src="getImageSource(image)" alt="Fading SVG Image" class="centered-image" />
     </div>
 </template>
   
 <script>
 export default {
-    components: {},
+    name: 'PersonalImage',
+    props: {
+        image: {
+            type: String,
+            required: true
+        }
+    },
+    methods: {
+        getImageSource(image) {
+            // Use require with a dynamic import to load the image
+            return require(`@/${image}`);
+        }
+    }
 };
 </script>
   
